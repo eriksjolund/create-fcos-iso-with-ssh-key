@@ -1,5 +1,5 @@
 # create-fcos-iso-with-ssh-key
-Quick and easy way to create a personalized iso file of Fedora CoreOS that contains your public SSH key.
+Quick and easy way to create a personalized iso file of [Fedora CoreOS](https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/) that contains your public SSH key.
 
 ## Introduction
 
