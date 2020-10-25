@@ -41,7 +41,7 @@ $ bash ./create-fcos-iso-with-ssh-key.sh podman x86_64 stable ~/.ssh/id_rsa.pub 
 The same command once again, but this time without `2> /dev/null` so that progress information is shown.
 
 ```
-$ bash ./create-fcos-iso-with-ssh-key.sh podman x86_64 stable ~/.ssh/id_rsa.pub core 2> /dev/null
+$ bash ./create-fcos-iso-with-ssh-key.sh podman x86_64 stable ~/.ssh/id_rsa.pub core
 Trying to pull quay.io/coreos/fcct:release...
 Getting image source signatures
 Copying blob sha256:34dbed599d79d8b71ec20eff9d57e57d37c74a576e2e2e9eb4c1aed8aad11ad7
