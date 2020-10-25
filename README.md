@@ -30,7 +30,7 @@ $ bash ./create-fcos-iso-with-ssh-key.sh podman stable ~/.ssh/id_rsa.pub myuser
 
 ## Examples
 
-Download the _stable_ release with the architecture *x86_64* and create the user _core_ and let the public SSH key ~/.ssh/id_rsa.pub
+Download the _stable_ release with the architecture *x86_64* and create the user _core_ and let the public SSH key _~/.ssh/id_rsa.pub_
 be able to log in over ssh to that account. The software _podman_ is the tool used to run the containers in the bash script.
 
 ```
