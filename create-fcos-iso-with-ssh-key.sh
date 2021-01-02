@@ -46,8 +46,6 @@ passwd:
 
 cat $4 >> ${tmpdir}/file.fcct
 $1 run --pull=always --rm -i quay.io/coreos/fcct:release --pretty --strict < ${tmpdir}/file.fcct > ${tmpdir}/file.ign
-$1 run --pull=always --rm -v ${tmpdir}:/data${volumeArg} -w /data quay.io/coreos/coreos-installer:release download --architecture $2 --stream $3 -f iso > /dev/null
-isofilename=$(cd ${tmpdir} && ls fedora-coreos-*.iso)
-isofilepath=$(ls ${tmpdir}/fedora-coreos-*.iso)
-$1 run --rm -i -v ${tmpdir}:/data${volumeArg} -w /data quay.io/coreos/coreos-installer:release iso ignition embed $isofilename < ${tmpdir}/file.ign
-echo $isofilepath
+iso_filepath=$($1 run --pull=always --rm -v ${tmpdir}:${tmpdir}${volumeArg} quay.io/coreos/coreos-installer:release download --directory ${tmpdir} --architecture $2 --stream $3 -f iso)
+$1 run --rm -i -v ${tmpdir}:${tmpdir}${volumeArg} quay.io/coreos/coreos-installer:release iso ignition embed $iso_filepath < ${tmpdir}/file.ign
+echo $iso_filepath

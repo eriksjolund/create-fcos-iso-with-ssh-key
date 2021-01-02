@@ -16,14 +16,14 @@ __podman__ or __docker__
 ## Usage
 
 ```
-$ bash ./create-fcos-iso-with-ssh-key.sh podman stable ~/.ssh/id_rsa.pub myuser
+$ bash ./create-fcos-iso-with-ssh-key.sh podman x86_64 stable ~/.ssh/id_rsa.pub myuser
 ```
 
 | argument nr | value |
 | --          | --    |
 | 1           | _podman_ or _docker_ |
-| 2           | _stable_, _testing_ or _next_ |
-| 3           | architecture (_x86_64_, ...) |
+| 2           | architecture (_x86_64_, ...) |
+| 3           | _stable_, _testing_ or _next_ |
 | 4           | path to your public SSH key |
 | 5           | username (choose _core_ if you need sudo permissions) |
 
@@ -95,9 +95,3 @@ Assuming _core_ is the username chosen before and _192.0.2.10_ is the IP address
 ```
 $ ssh core@192.0.2.10
 ```
-
-
-
-
-
-
